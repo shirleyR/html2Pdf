@@ -1,0 +1,27 @@
+{
+  "name": "HtmlToPdfTools",
+  "version": "1.0",
+  "description": "a tool to export html to pdf",
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": "images/get_started16.png"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
+
+}
